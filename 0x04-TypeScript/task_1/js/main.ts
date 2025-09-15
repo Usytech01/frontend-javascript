@@ -1,44 +1,39 @@
-interface Teacher{
-    firstName: string;
-    lastName: string;
-    fullTimeEmployee: boolean;
-    yearsOfExperience: number;
-    location: string;
-    contract: boolean;
-    Teacher: any;
+
+
+interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
-const teacher: Teacher = {
-    firstName: "John",
-    lastName: "Smit",
-    fullTimeEmployee: true,
-    location: "Lagos",
-    contract: true,
-    yearsOfExperience: 0,
-    Teacher: undefined
-};
-
-console.log(teacher);
-
-
-interface Directors{
-    firstName: string;
-    lastName: string;
-    fullTimeEmployee: boolean;
-    numberOfReports:number;
-    location: string;
-    contract: boolean;
-    Teacher: any;
-
+// Director interface extending Teacher
+interface Director extends Teacher {
+  numberOfReports: number;
 }
 
-const director1: Directors = {
-    firstName: 'John',
-    lastName: 'Doe',
-    location: 'London',
-    fullTimeEmployee: true,
-    numberOfReports: 17,
-    contract: false,
-    Teacher: undefined
-};
-console.log(director1);
+// Interface for the printTeacher function
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// Function implementation (must be a function declaration, not arrow)
+function printTeacher(firstName: string, lastName: string): string {
+  const teacher = { firstName, lastName }; // <-- this gives us { firstName, lastName }
+  return `${firstName}. ${lastName}`;
+}
+
+// StudentClass implementation
+class StudentClass {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.lastName + this.firstName; // Corrected to return lastName + firstName
+  }
+}
