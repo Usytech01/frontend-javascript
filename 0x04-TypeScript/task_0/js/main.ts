@@ -23,7 +23,7 @@ const student2: Student = {
 };
 
 // 3. Create an array containing the students
-const studenList: Student[] = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
 // 4. Render a table in the DOM using Vanilla JS
 
@@ -49,7 +49,7 @@ headerRow.appendChild(headerLocation);
 table.appendChild(headerRow);
 
 // Append rows for each student
-studenList.forEach((student) => {
+studentsList.forEach((student) => {
   const row = document.createElement("tr");
 
   const firstNameCell =document.createElement("td");
