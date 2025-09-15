@@ -19,3 +19,26 @@ const teacher: Teacher = {
 };
 
 console.log(teacher);
+
+
+interface Directors{
+    firstName: string;
+    lastName: string;
+    fullTimeEmployee: boolean;
+    numberOfReports:number;
+    location: string;
+    contract: boolean;
+    Teacher: any;
+
+}
+
+const director1: Directors = {
+    firstName: 'John',
+    lastName: 'Doe',
+    location: 'London',
+    fullTimeEmployee: true,
+    numberOfReports: 17,
+    contract: false,
+    Teacher: undefined
+};
+console.log(director1);
