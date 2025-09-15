@@ -1,6 +1,6 @@
 
 // 1. Define the Student interface
-interface student{
+interface Student{
   firstName:string;
   lastName: string;
   age     : number;
@@ -8,14 +8,14 @@ interface student{
 }
 
 // 2. Create two students
-const student1: student = {
+const student1: Student = {
   firstName: "Smith",
   lastName: "John",
   age: 30,
   location: "Lagos"
 };
 
-const student2: student = {
+const student2: Student = {
   firstName: "Jane",
   lastName: "John",
   age: 25,
@@ -23,7 +23,7 @@ const student2: student = {
 };
 
 // 3. Create an array containing the students
-const studenList: student[] = [student1, student2];
+const studenList: Student[] = [student1, student2];
 
 // 4. Render a table in the DOM using Vanilla JS
 
