@@ -37,3 +37,25 @@ class StudentClass {
     return this.lastName + this.firstName; // Corrected to return lastName + firstName
   }
 }
+
+// Example usage:
+const teacher1: Teacher = {
+  firstName: "John",
+  lastName: "Doe",
+  fullTimeEmployee: true,
+  location: "New York",
+  contract: true, // extra attribute allowed
+};
+
+// teacher1.firstName = "Mike"; // ❌ Error: cannot reassign because it's readonly
+
+console.log(teacher1);
+
+const director1: Director = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1)
